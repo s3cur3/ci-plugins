@@ -1,0 +1,10 @@
+{
+    "name" : "Slides Custom Post Type",
+    "slug" : "ci-slides-cpt",
+    "download_url" : "http://cisandbox.mystagingwebsite.com/wp-content/plugins/ci-slides-cpt.zip",
+    "version" : "1.04",
+    "author" : "Tyler Young",
+    "sections" : {
+        "description" : "Adds a Slides post type for your theme to use."
+    }
+}

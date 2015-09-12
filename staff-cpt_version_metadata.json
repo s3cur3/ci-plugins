@@ -1,0 +1,10 @@
+{
+    "name" : "Staff Custom Post Type",
+    "slug" : "ci-staff-cpt",
+    "download_url" : "http://cisandbox.mystagingwebsite.com/wp-content/plugins/ci-staff-cpt.zip",
+    "version" : "1.02",
+    "author" : "Tyler Young",
+    "sections" : {
+        "description" : "Adds a 'Staff' post type for your theme to use."
+    }
+}
