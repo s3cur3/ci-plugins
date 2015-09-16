@@ -137,7 +137,7 @@ function ciSliderHTMLShortcode($atts) {
                              ), $atts ), EXTR_OVERWRITE /* overwrite existing vars */ );
 
     $size = CI_SIZE_MD;
-    if(get_option('full_width_container') || (function_exists('of_get_option') && of_get_option('mlf_demo_site')) ) {
+    if(get_option('full_width_container') || get_option('mlf_demo_site') ) {
         $size = CI_SIZE_LG;
     }
 
