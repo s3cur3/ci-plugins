@@ -1,6 +1,7 @@
 <?php
 
 if( !defined('CI_SLUG') ) define('CI_SLUG', 'conversion-insights');
+if( !defined('CI_THEME_PREFIX') ) define('CI_THEME_PREFIX', 'ci');
 if( !defined('CI_TEXT_DOMAIN') ) define('CI_TEXT_DOMAIN', CI_SLUG);
 
 if( !defined('CI_SLIDE_TYPE') ) define("CI_SLIDE_TYPE", "ci-slide");

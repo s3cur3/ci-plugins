@@ -3,7 +3,7 @@
 Plugin Name: Slides Custom Post Type
 Plugin URI: http://conversioninsights.net
 Description: Adds a "Slides" post type to be used in the theme.
-Version: 1.04
+Version: 2.04
 Author: Tyler Young
 Author URI: http://conversioninsights.net
 */
@@ -39,7 +39,7 @@ function ciSlidesRegisterMetaBoxes( $meta_boxes ) {
      * Alt.: You also can make prefix empty to disable it
      */
     // Better has an underscore as last sign
-    $prefix = (defined('CI_THEME_PREFIX') ? CI_THEME_PREFIX : 'mlf') . '_';
+    $prefix = (defined('CI_THEME_PREFIX') ? CI_THEME_PREFIX : 'ci') . '_';
 
     // Meta box for the slides custom post type
     $meta_boxes[] = array(
