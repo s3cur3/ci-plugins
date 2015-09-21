@@ -79,18 +79,18 @@ if( !function_exists('ciGetEmployeesHTML') ) {
             return "";
         }
 
-        $divClass = "employees";
         $liClass = "employee";
+        $ulClass = "";
         if( $employeesPerRow > 1 ) {
-            $divClass .= " row";
+            $ulClass .= " row";
             $colWidth = 12 / $employeesPerRow;
             $liClass .= " col-sm-{$colWidth}";
         }
 
 
-        $out = "<div class=\"{$divClass}\">";
+        $out = "<div class=\"employees\">";
         if( count($employees) > 1 ) {
-            $out .= "<ul>\n";
+            $out .= "<ul class=\"{$ulClass}\">\n";
             for( $i = 0; $i < count($employees); $i++ ) {
                 $out .= "<li class=\"{$liClass}\" itemscope itemtype=\"http://schema.org/Person\">\n";
                 $out .= getEmployeeInnerHTML($employees[$i], $headingLevel, "none", $listOnly);

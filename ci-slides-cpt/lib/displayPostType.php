@@ -31,8 +31,8 @@ function ciGetAllSlides($category, $maxNumSlides, $size) {
         if($attachment) {
             $slidesArray[] = array(
                 'id' => $query->post->ID,
-                'content' => $query->post->post_content,
-                'title' => $query->post->post_title,
+                'content' => apply_filters('the_content', $query->post->post_content),
+                'title' => apply_filters('the_title', $query->post->post_title),
                 'imgURL' => $attachment[0],
                 'imgWidth' => $attachment[1],
                 'imgHeight' => $attachment[2],
