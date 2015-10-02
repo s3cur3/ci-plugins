@@ -48,7 +48,7 @@ if( !function_exists('ciGetAllStaff') ) {
  */
 if( !function_exists('ciGetEmployeesHTML') ) {
     function ciGetEmployeesHTML( $employeesPerRow = 1, $numEmployees = 100, $headingLevel = 3, $maxCharLength = -1, $listOnly = false ) {
-        function getEmployeeInnerHTML( $employee, $headingLevel, $floatImg="right", $listOnly) {
+        function ciGetEmployeeInnerHTML( $employee, $headingLevel, $floatImg="right", $listOnly) {
             $imgClass = "employee-img";
             if( $floatImg == "right" ) {
                 $imgClass .= " alignright ml20";
@@ -93,12 +93,12 @@ if( !function_exists('ciGetEmployeesHTML') ) {
             $out .= "<ul class=\"{$ulClass}\">\n";
             for( $i = 0; $i < count($employees); $i++ ) {
                 $out .= "<li class=\"{$liClass}\" itemscope itemtype=\"http://schema.org/Person\">\n";
-                $out .= getEmployeeInnerHTML($employees[$i], $headingLevel, "none", $listOnly);
+                $out .= ciGetEmployeeInnerHTML($employees[$i], $headingLevel, "none", $listOnly);
                 $out .= "</li>\n";
             }
             $out .= "</ul>\n";
         } else {
-            $out .= getEmployeeInnerHTML($employees[0], $headingLevel, "right", $listOnly);
+            $out .= ciGetEmployeeInnerHTML($employees[0], $headingLevel, "right", $listOnly);
         }
         $out .= "</div>";
         return $out;
@@ -107,7 +107,7 @@ if( !function_exists('ciGetEmployeesHTML') ) {
 
 
 /**
- * Wrapper for the getSliderHTML() function, to be used by the Wordpress Shortcode API
+ * Wrapper for the ciGetEmployeesHTML() function, to be used by the Wordpress Shortcode API
  * @param $atts array containing optional 'category' field.
  * @return string The HTML that will display a slider on page
  */

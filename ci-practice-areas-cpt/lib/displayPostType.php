@@ -3,7 +3,7 @@
 
 
 
-add_shortcode('practiceareas', 'mlfHandlePracticeAreaShortcode');
+add_shortcode('practiceareas', 'ciHandlePracticeAreaShortcode');
 /**
  * Handles the [practiceareas /] shortcode. Usage:
  *
@@ -15,7 +15,7 @@ add_shortcode('practiceareas', 'mlfHandlePracticeAreaShortcode');
  * @param array $atts
  * @param string $content
  */
-function mlfHandlePracticeAreaShortcode( $atts, $content="" ) {
+function ciHandlePracticeAreaShortcode( $atts, $content="" ) {
     $list = false;
     $max = 1000;
     $length = 250;
@@ -34,14 +34,14 @@ function mlfHandlePracticeAreaShortcode( $atts, $content="" ) {
             ), ciNormalizeShortcodeAtts($atts), 'practiceareas' ) );
 
     if( $list ) {
-        return mlfGetPracticeAreasTitlesList($max);
+        return ciGetPracticeAreasTitlesList($max);
     } else {
-        return mlfGetPracticeAreasHTML($max, 3, $length, true, $columns, $more, $mb);
+        return ciGetPracticeAreasHTML($max, 3, $length, true, $columns, $more, $mb);
     }
 }
 
 
-function mlfGetPracticeAreasTitlesList( $maxAreas ) {
+function ciGetPracticeAreasTitlesList( $maxAreas ) {
     $practiceAreas = ciGetPostsOfType( MLF_PRACTICE_AREA_TYPE, 1, array(), $maxAreas );
 
     $out = "<ul class=\"practice-areas\">";
@@ -68,8 +68,8 @@ function mlfGetPracticeAreasTitlesList( $maxAreas ) {
  * @param $mb int Bottom margin, in px
  * @return string The HTML to be output
  */
-if( !function_exists('mlfGetPracticeAreasHTML') ) {
-    function mlfGetPracticeAreasHTML( $numPracticeAreas = 100,
+if( !function_exists('ciGetPracticeAreasHTML') ) {
+    function ciGetPracticeAreasHTML( $numPracticeAreas = 100,
                                       $headingLevel = 3,
                                       $maxCharLength = -1,
                                       $useImages=true,
@@ -114,7 +114,7 @@ if( !function_exists('mlfGetPracticeAreasHTML') ) {
         }
 
 
-        $practiceAreas = ciGetPostsOfType( MLF_PRACTICE_AREA_TYPE, $maxCharLength, array(1000,1000), $numPracticeAreas );
+        $practiceAreas = ciGetPostsOfType( CI_PRACTICE_AREA_TYPE, $maxCharLength, array(1000,1000), $numPracticeAreas );
 
         if( count($practiceAreas) == 0 ) {
             return "";

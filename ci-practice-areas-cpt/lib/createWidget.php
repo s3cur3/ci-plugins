@@ -59,9 +59,9 @@ if( !class_exists('CIPracticeAreasWidget') ) {
                 echo $before_title, $title, $after_title;
             }
             if( isset($instance['list']) ) {
-                echo mlfGetPracticeAreasTitlesList($instance['maxPracticeAreas']);
+                echo ciGetPracticeAreasTitlesList($instance['maxPracticeAreas']);
             } else {
-                echo mlfGetPracticeAreasHTML($instance['maxPracticeAreas'], 0, $instance['maxCharLength']);
+                echo ciGetPracticeAreasHTML($instance['maxPracticeAreas'], 0, $instance['maxCharLength']);
             }
             echo $after_widget;
 
