@@ -18,6 +18,7 @@ function ciCreateSlidePostType() {
         ),
         'public' => true,
         'publicly_queryable' => true,
+        'exclude_from_search' => true,
         'show_ui' => true,
         'menu_icon' => 'dashicons-format-gallery', // A Dashicon: http://melchoyce.github.io/dashicons/
         'show_in_menu' => true,
