@@ -48,28 +48,30 @@ if( !function_exists('ciGetAllStaff') ) {
  */
 if( !function_exists('ciGetEmployeesHTML') ) {
     function ciGetEmployeesHTML( $employeesPerRow = 1, $numEmployees = 100, $headingLevel = 3, $maxCharLength = -1, $listOnly = false ) {
-        function ciGetEmployeeInnerHTML( $employee, $headingLevel, $floatImg="right", $listOnly) {
-            $imgClass = "employee-img";
-            if( $floatImg == "right" ) {
-                $imgClass .= " alignright ml20";
-            } else if( $floatImg == "left" ) {
-                $imgClass .= " alignleft mr20";
-            }
+        if(!function_exists('ciGetEmployeeInnerHTML')) {
+            function ciGetEmployeeInnerHTML($employee, $headingLevel, $floatImg = "right", $listOnly) {
+                $imgClass = "employee-img";
+                if($floatImg == "right") {
+                    $imgClass .= " alignright ml20";
+                } else if($floatImg == "left") {
+                    $imgClass .= " alignleft mr20";
+                }
 
-            $out = "";
-            if( strlen ($employee['imgURL']) > 0 ) {
-                $out  .= "    <a href=\"{$employee['url']}\"><img alt=\"{$employee['title']}\" src=\"{$employee['imgURL']}\" width=\"{$employee['imgWidth']}\" height=\"{$employee['imgHeight']}\" class=\"{$imgClass}\" itemprop=\"image\"></a>\n";
-            }
+                $out = "";
+                if(strlen($employee['imgURL']) > 0) {
+                    $out .= "    <a href=\"{$employee['url']}\"><img alt=\"{$employee['title']}\" src=\"{$employee['imgURL']}\" width=\"{$employee['imgWidth']}\" height=\"{$employee['imgHeight']}\" class=\"{$imgClass}\" itemprop=\"image\"></a>\n";
+                }
 
-            $a = "<a href=\"{$employee['url']}\" itemprop=\"name\">{$employee['title']}</a>";
-            if( $listOnly ) {
-                return $a;
-            }
+                $a = "<a href=\"{$employee['url']}\" itemprop=\"name\">{$employee['title']}</a>";
+                if($listOnly) {
+                    return $a;
+                }
 
-            $out .= "    <h{$headingLevel}>{$a}</h{$headingLevel}>\n";
-            $out .= "    {$employee['content']}\n";
-            $out .= "";
-            return $out;
+                $out .= "    <h{$headingLevel}>{$a}</h{$headingLevel}>\n";
+                $out .= "    {$employee['content']}\n";
+                $out .= "";
+                return $out;
+            }
         }
 
 
