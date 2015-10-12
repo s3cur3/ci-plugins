@@ -42,7 +42,7 @@ function ciHandlePracticeAreaShortcode( $atts, $content="" ) {
 
 
 function ciGetPracticeAreasTitlesList( $maxAreas ) {
-    $practiceAreas = ciGetPostsOfType( MLF_PRACTICE_AREA_TYPE, 1, array(), $maxAreas );
+    $practiceAreas = ciGetPostsOfType( CI_PRACTICE_AREA_TYPE, 1, array(), $maxAreas );
 
     $out = "<ul class=\"practice-areas\">";
     foreach( $practiceAreas as $practiceArea ) {
