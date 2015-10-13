@@ -27,7 +27,7 @@ if( !function_exists('ciGetAllStaff') ) {
                 'imgWidth' => ($attachment ? $attachment[1] : -1),
                 'imgHeight' => ($attachment ? $attachment[2] : -1),
                 'url' => get_permalink($query->post->ID),
-                'socialURLs' => (function_exists('getStaffSocialURLs') ? getStaffSocialURLs($query->post->ID) : array())
+                'socialURLs' => (function_exists('ciGetStaffSocialURLs') ? ciGetStaffSocialURLs($query->post->ID) : array())
             );
         }
 
