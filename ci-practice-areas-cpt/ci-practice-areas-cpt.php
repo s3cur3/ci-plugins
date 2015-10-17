@@ -19,7 +19,7 @@ require_once 'lib/createWidget.php';
 
 $UpdateChecker =
     PucFactory::buildUpdateChecker(
-              'http://conversioninsights.net/downloads/plugins/practice-areas-cpt_version_metadata.json',
+              'http://ci-modern-accounting-firm.mystagingwebsite.com/downloads/plugins/practice-areas-cpt_version_metadata.json',
               __FILE__,
               'ci-practice-areas-cpt',
               720 // check once a month for updates -- 720 == 24*30

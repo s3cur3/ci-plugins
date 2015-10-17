@@ -17,7 +17,7 @@ require_once 'lib/displayPostType.php';
 
 $UpdateChecker =
     PucFactory::buildUpdateChecker(
-              'http://cisandbox.mystagingwebsite.com/wp-content/plugins/slides-cpt_version_metadata.json',
+              'http://ci-modern-accounting-firm.mystagingwebsite.com/downloads/plugins/slides-cpt_version_metadata.json',
               __FILE__,
               'ci-slides-cpt',
               720 // check once a month

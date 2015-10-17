@@ -16,7 +16,7 @@ require_once 'lib/displayStaffType.php';
 
 $UpdateChecker =
     PucFactory::buildUpdateChecker(
-              'http://cisandbox.mystagingwebsite.com/wp-content/plugins/staff-cpt_version_metadata.json',
+              'http://ci-modern-accounting-firm.mystagingwebsite.com/downloads/plugins/staff-cpt_version_metadata.json',
               __FILE__,
               'ci-staff-cpt',
               720 // check once a month for updates -- 720 == 24*30
