@@ -78,13 +78,13 @@ function ciSliderTypeUpdatedMessages( $messages ) {
     $messages[CI_SLIDE_TYPE] = array(
         0 => '', // Unused. Messages start at index 1.
         1 => sprintf( __('Slide updated. <a href="%s">View slide</a>'), esc_url( get_permalink($post_ID) ) ),
-        2 => __('Custom field updated.', CI_TEXT_DOMAIN),
-        3 => __('Custom field deleted.', CI_TEXT_DOMAIN),
-        4 => __('Slide updated.', CI_TEXT_DOMAIN),
+        2 => __('Custom field updated.', 'ci-modern-accounting-firm'),
+        3 => __('Custom field deleted.', 'ci-modern-accounting-firm'),
+        4 => __('Slide updated.', 'ci-modern-accounting-firm'),
         /* translators: %s: date and time of the revision */
-        5 => isset($_GET['revision']) ? sprintf( __('Slide restored to revision from %s', CI_TEXT_DOMAIN), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
+        5 => isset($_GET['revision']) ? sprintf( __('Slide restored to revision from %s', 'ci-modern-accounting-firm'), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
         6 => sprintf( __('Slide published. <a href="%s">View slide</a>'), esc_url( get_permalink($post_ID) ) ),
-        7 => __('Slide saved.', CI_TEXT_DOMAIN),
+        7 => __('Slide saved.', 'ci-modern-accounting-firm'),
         8 => sprintf( __('Slide submitted. <a target="_blank" href="%s">Preview slide</a>'), esc_url( add_query_arg( 'preview', 'true', get_permalink($post_ID) ) ) ),
         9 => sprintf( __('Slide scheduled for: <strong>%1$s</strong>. <a target="_blank" href="%2$s">Preview slide</a>'),
             // translators: Publish box date format, see http://php.net/date

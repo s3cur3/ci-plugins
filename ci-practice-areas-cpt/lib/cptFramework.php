@@ -59,8 +59,8 @@ if( !function_exists('ciCPTUpdatedMessages') ) {
         $messages[$registeredID] = array(
             0 => '', // Unused. Messages start at index 1.
             1 => sprintf( __("$singular updated. <a href=\"%s\">View $singular</a>"), esc_url( get_permalink($post_ID) )),
-            2 => __('Custom field updated.', CI_TEXT_DOMAIN),
-            3 => __('Custom field deleted.', CI_TEXT_DOMAIN),
+            2 => __('Custom field updated.', 'ci-modern-accounting-firm'),
+            3 => __('Custom field deleted.', 'ci-modern-accounting-firm'),
             4 => "$singular updated.",
             /* translators: %s: date and time of the revision */
             5 => isset($_GET['revision']) ? sprintf( "$singular restored to revision from %s", wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,

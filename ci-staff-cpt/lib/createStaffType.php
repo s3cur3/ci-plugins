@@ -79,13 +79,13 @@ if( !function_exists('ciStaffTypeUpdatedMessages') ) {
         $messages[CI_STAFF_TYPE] = array(
             0 => '', // Unused. Messages start at index 1.
             1 => sprintf( __('Staff member updated. <a href="%s">View staff member</a>'), esc_url( get_permalink($post_ID) ) ),
-            2 => __('Custom field updated.', CI_TEXT_DOMAIN),
-            3 => __('Custom field deleted.', CI_TEXT_DOMAIN),
-            4 => __('Staff member updated.', CI_TEXT_DOMAIN),
+            2 => __('Custom field updated.', 'ci-modern-accounting-firm'),
+            3 => __('Custom field deleted.', 'ci-modern-accounting-firm'),
+            4 => __('Staff member updated.', 'ci-modern-accounting-firm'),
             /* translators: %s: date and time of the revision */
-            5 => isset($_GET['revision']) ? sprintf( __('Staff member restored to revision from %s', CI_TEXT_DOMAIN), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
+            5 => isset($_GET['revision']) ? sprintf( __('Staff member restored to revision from %s', 'ci-modern-accounting-firm'), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
             6 => sprintf( __('Staff member published. <a href="%s">View staff member</a>'), esc_url( get_permalink($post_ID) ) ),
-            7 => __('Staff member saved.', CI_TEXT_DOMAIN),
+            7 => __('Staff member saved.', 'ci-modern-accounting-firm'),
             8 => sprintf( __('Staff member submitted. <a target="_blank" href="%s">Preview staff member</a>'), esc_url( add_query_arg( 'preview', 'true', get_permalink($post_ID) ) ) ),
             9 => sprintf( __('Staff member scheduled for: <strong>%1$s</strong>. <a target="_blank" href="%2$s">Preview staff member</a>'),
                 // translators: Publish box date format, see http://php.net/date

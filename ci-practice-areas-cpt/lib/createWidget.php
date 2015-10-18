@@ -21,9 +21,9 @@ if( !class_exists('CIPracticeAreasWidget') ) {
 
 
         function __construct() {
-            $widget_ops = array( 'classname' => $this->className, 'description' => __( 'Displays a list of your practice areas', CI_TEXT_DOMAIN ) );
+            $widget_ops = array( 'classname' => $this->className, 'description' => __( 'Displays a list of your practice areas', 'ci-modern-accounting-firm' ) );
 
-            parent::__construct( $this->className, __( 'Practice Areas', CI_TEXT_DOMAIN ), $widget_ops );
+            parent::__construct( $this->className, __( 'Practice Areas', 'ci-modern-accounting-firm' ), $widget_ops );
             $this->alt_option_name = $this->className;
 
             add_action( 'save_post', array( &$this, 'flush_widget_cache' ) );
@@ -103,7 +103,7 @@ if( !class_exists('CIPracticeAreasWidget') ) {
                     $typeSpecificStuff .= "type=\"text\"";
                 } ?>
                 <p>
-                    <label for="<?php echo esc_attr( $this->get_field_id( $name ) ); ?>"><?php _e( "{$label}", CI_TEXT_DOMAIN ); ?></label>
+                    <label for="<?php echo esc_attr( $this->get_field_id( $name ) ); ?>"><?php _e( "{$label}", 'ci-modern-accounting-firm' ); ?></label>
                     <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( $name ) ); ?>"
                            name="<?php echo esc_attr( $this->get_field_name( $name ) ); ?>"
                            value="<?php echo ${$name}; ?>" <?php echo $typeSpecificStuff; ?>>
