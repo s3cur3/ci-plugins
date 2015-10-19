@@ -2,7 +2,7 @@
     "name" : "Slides Custom Post Type",
     "slug" : "ci-slides-cpt",
     "download_url" : "http://ci-modern-accounting-firm.mystagingwebsite.com/downloads/plugins/ci-slides-cpt.zip",
-    "version" : "1.04",
+    "version" : "2.04",
     "author" : "Tyler Young",
     "sections" : {
         "description" : "Adds a Slides post type for your theme to use."
