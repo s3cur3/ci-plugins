@@ -47,7 +47,7 @@ function ciSlidesRegisterMetaBoxes( $meta_boxes ) {
         'id' => 'slides-only',
 
         // Meta box title - Will appear at the drag and drop handle bar. Required.
-        'title' => __( 'Slide options', 'ci-modern-accounting-firm' ),
+        'title' => __( 'Slide options', 'conversion-insights-shared' ),
 
         // Post types, accept custom post types as well - DEFAULT is array('post'). Optional.
         'pages' => array( CI_SLIDE_TYPE ),
@@ -65,43 +65,43 @@ function ciSlidesRegisterMetaBoxes( $meta_boxes ) {
         'fields' => array(
             // Caption position
             array(
-                'name' => __( 'Position of caption:', 'ci-modern-accounting-firm' ),
+                'name' => __( 'Position of caption:', 'conversion-insights-shared' ),
                 'id' => "{$prefix}caption_position",
                 'type' => 'select',
                 // Array of 'value' => 'Label' pairs for select box
                 'options' => array(
-                    'center' => __( 'Center', 'ci-modern-accounting-firm' ),
-                    'left' => __( 'Left', 'ci-modern-accounting-firm' ),
-                    'right' => __( 'Right', 'ci-modern-accounting-firm' ),
-                    'none' => __( 'Not displayed', 'ci-modern-accounting-firm' ),
+                    'center' => __( 'Center', 'conversion-insights-shared' ),
+                    'left' => __( 'Left', 'conversion-insights-shared' ),
+                    'right' => __( 'Right', 'conversion-insights-shared' ),
+                    'none' => __( 'Not displayed', 'conversion-insights-shared' ),
                 ),
                 // Select multiple values, optional. Default is false.
                 'multiple' => false,
                 'std' => 'center',
-                'desc' => __('<strong>Note:</strong> On very small screens, all captions will be centered, with a transparent background.', 'ci-modern-accounting-firm' )
+                'desc' => __('<strong>Note:</strong> On very small screens, all captions will be centered, with a transparent background.', 'conversion-insights-shared' )
             ),
             // Caption background color
             array(
-                'name' => __( 'Caption background color', 'ci-modern-accounting-firm' ),
+                'name' => __( 'Caption background color', 'conversion-insights-shared' ),
                 'id' => "{$prefix}caption_bg",
                 'type' => 'color',
-                'desc' => __('<strong>Only</strong> applies to left- or right-positioned captions. Defaults to the secondary background color.', 'ci-modern-accounting-firm' )
+                'desc' => __('<strong>Only</strong> applies to left- or right-positioned captions. Defaults to the secondary background color.', 'conversion-insights-shared' )
             ),
             array(
-                'name' => __( 'Darken slide image?', 'ci-modern-accounting-firm' ),
+                'name' => __( 'Darken slide image?', 'conversion-insights-shared' ),
                 'id'   => "{$prefix}darken_slide",
-                'desc' => __( 'If checked, image will be darkened 30% (useful for making white text readable over bright images)', 'ci-modern-accounting-firm' ),
+                'desc' => __( 'If checked, image will be darkened 30% (useful for making white text readable over bright images)', 'conversion-insights-shared' ),
                 'type' => 'checkbox',
                 // Value can be 0 or 1
                 'std' => 1,
             ),
             array(
                 // Field name - Will be used as label
-                'name'  => __( 'Link slide to this URL:', 'ci-modern-accounting-firm' ),
+                'name'  => __( 'Link slide to this URL:', 'conversion-insights-shared' ),
                 // Field ID, i.e. the meta key
                 'id'    => "{$prefix}link",
                 // Field description (optional)
-                'desc'  => __( 'Leave blank for no link.', 'ci-modern-accounting-firm' ),
+                'desc'  => __( 'Leave blank for no link.', 'conversion-insights-shared' ),
                 'type'  => 'text',
                 // Default value (optional)
                 'std'   => '',
