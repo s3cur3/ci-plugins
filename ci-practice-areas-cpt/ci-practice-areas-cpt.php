@@ -3,7 +3,7 @@
 Plugin Name: Practice Areas Custom Post Type
 Plugin URI: http://conversioninsights.net
 Description: Adds a "Practice Areas" post type to be used in the theme slider.
-Version: 2.05
+Version: 2.06
 Author: Tyler Young
 Author URI: http://conversioninsights.net
 */
